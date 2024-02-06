@@ -17,8 +17,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 guard let windowScene = (scene as? UIWindowScene) else { return }
                 //Windowをインスタンス化
                 window = UIWindow(windowScene: windowScene)
-                //rootViewControllerにStoryboardをHomeViewに指定して初期ビューコントローラーをインスタンス化
-                window?.rootViewController = UIStoryboard(name: "First", bundle: nil).instantiateInitialViewController() as! FirstViewController
+        
+                //rootViewControllerにStoryboardをFirstに指定して初期ビューコントローラーをインスタンス化
+                window?.rootViewController = UIStoryboard(name: "First", bundle: nil).instantiateInitialViewController()
                 //ウィンドウ表示を実行
                 window?.makeKeyAndVisible()
     }

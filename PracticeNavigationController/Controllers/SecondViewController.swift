@@ -11,19 +11,20 @@ class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //画面３へ　ボタン
+    @IBAction func didTapGoToThirdScreenButton(_ sender: UIButton) {
+        //ThirdViewControllerをインスタンス化
+        let thirdViewController = UIStoryboard(name: "Third", bundle: nil).instantiateViewController(withIdentifier: "Third") as! ThirdViewController
+        
+        //Thirdへ遷移
+        navigationController?.pushViewController(thirdViewController, animated: true)
     }
-    */
 
+    //画面1へ　ボタン
+    @IBAction func didTapBackToFirstScreenButton(_ sender: UIButton) {
+        //Firstへ戻る
+        navigationController?.popViewController(animated: true)
+    }
 }
